@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Explore Culinary</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #dynamic-header {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #dynamic-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        #dynamic-header .content {
+            position: relative;
+            z-index: 1;
+        }
+        .recipe-card {
+            transition: transform 0.3s;
+        }
+        .recipe-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Explore Culinary</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="subscribe.html">Subscribe Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vote.html">Vote Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="restaurant.html">Restaurant</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Global cuisene/1.html">Global Cuisines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Malaysian cuisene/FEW assignment/coverpage.html">Malaysian Cuisines</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="dynamic-header" class="jumbotron text-center">
+        <div class="content">
+            <h1 class="display-4">About Us</h1>
+            <p class="lead">Discover our journey and passion for culinary excellence.</p>
+        </div>
+    </header>
+
+    <!-- JavaScript for Dynamic Background -->
+    <script>
+        const header = document.getElementById('dynamic-header');
+        const images = [
+            'url("Main page/picture/cuisene1.jpg")',
+            'url("Main page/picture/cuisene2.jpg")',
+            'url("Main page/picture/cuisene3.jpg")',
+            'url("Main page/picture/cuisene4.jpg")',
+        ];
+        let currentIndex = 0;
+
+        function changeBackground() {
+            header.style.backgroundImage = images[currentIndex];
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        // Change background every 3s
+        changeBackground();
+        setInterval(changeBackground, 3000);
+    </script>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section id="history">
+            <h2>Our History</h2>
+            <p>The recipe website "Explore Culinary" was founded in 2020 by a group of passionate food enthusiasts. What started as a simple journal to document their cooking recipes quickly gained popularity among food lovers. The unique approach in supplying Malaysian recipes resonated with readers, and within a year, the website had attracted many readers. The early years of Explore Culinary were marked by rapid growth, with continuous posting of new recipes, cooking tips, and food photography, all while engaging with growing community of followers through comments and social media.</p>
+            <p>As the webpage gained attraction, "Explore Culinary" expanded their content to include not just Malaysian traditional food recipes but also Global food recipes. The success of the blog led to numerous awards and features in major publications, cementing its place in the food website sphere.</p>
+            <p>Over the years, Explore Culinary continued to evolve by bringing on a team of contributors to keep up with the growing demand for content. The blog's success allowed it to branch out into new mediums, including a popular Facebook and Instagram pages. Today, Explore Culinary is not just a blog but a full-fledged brand, with millions of readers and followers across various platforms. It remains a beloved resource for anyone passionate about food, offering everything from simple weeknight recipes to in-depth explorations of both global and Malaysian cuisines.</p>
+        </section>
+
+        <section id="recipes" class="mt-5">
+            <h2>Featured Recipes</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <a href="Global cuisene/paellarecipe.html" class="recipe-link">
+                        <div class="card recipe-card">
+                            <img src="Global cuisene/images/paella.png" class="card-img-top" alt="Recipe 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Spanish Paella</h5>
+                                <p class="card-text">You can make a delicious, authentic Paella the most popular dish of Spain in your own kitchen with simple ingredients like rice, saffron, vegetables, chicken, and seafood. If you love cooking International food, you will fall in love with this comforting dish!</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="Global cuisene/eggtartrecipe.html" class="recipe-link">
+                        <div class="card recipe-card">
+                            <img src="Global cuisene/images/eggTart.png" class="card-img-top" alt="Recipe 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Portuguese Egg Tart</h5>
+                                <p class="card-text">A crisp pastry shell houses creamy custard before baking until golden for this beloved Portuguese egg tart recipe from George Mendes. Learn how to make these delicious egg tarts with simple ingredients at home, no plane ticket required.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="Malaysian cuisene/FEW assignment/ayam rendang recipe.html" class="recipe-link">
+                        <div class="card recipe-card">
+                            <img src="Malaysian cuisene/FEW assignment/FoodPicture/ayam rendang.jpg" class="card-img-top" alt="Recipe 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Ayam Rendang</h5>
+                                <p class="card-text">An amazing Malaysian-Indonesian chicken stew with spices and coconut milk. Deeply flavorful. Chicken rendang is slow cooked and stewed in the rendang sauce and my chicken rendang recipe yields flavorful and tender chicken, with complex structure of flavors, with the intense aroma of the exotic spices.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3">
+        <p>&copy; 2024 Explore Culinary. All rights reserved.</p>
+    </footer>
+
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.recipe-card').hover(
+                function() { $(this).addClass('shadow-lg'); },
+                function() { $(this).removeClass('shadow-lg'); }
+            );
+        });
+    </script>
+</body>
+</html>

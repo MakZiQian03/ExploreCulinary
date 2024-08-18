@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Cuisines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .food-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.food-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.food-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover;
+}
+
+.food-item h2 {
+    margin: 10px 0;
+    flex-grow: 1;
+}
+
+.recipe-link {
+    display: block;
+    margin: 20px auto; /* Added margin for spacing */
+    padding: 10px;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.recipe-link:hover {
+    background-color: #e55337;
+}
+
+footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Global Cuisines</h1>
+    </header>
+
+    <section class="food-gallery">
+        <div class="food-item">
+            <img src="images/paella.png" alt="Spanish Paella">
+            <h2>Spanish Paella</h2>
+         
+            <a href="paellarecipe.html" class="recipe-link">View Recipe</a>
+        </div>
+        <div class="food-item">
+            <img src="images/tom-yum.png" alt="Seafood Tom Yum (Thailand)">
+            <h2>Seafood Tom Yum (Thailand)</h2>
+            
+            <a href="tomyamrecipe.html" class="recipe-link">View Recipe</a>
+        </div>
+        <div class="food-item">
+            <img src="images/eggTart.png" alt="Portuguese Egg Tart">
+            <h2>Portuguese Egg Tart</h2>
+            
+            <a href="eggtartrecipe.html" class="recipe-link">View Recipe</a>
+        </div>
+        <div class="food-item">
+            <img src="images/tacos.png" alt="Mexican Tacos">
+            <h2>Mexican Tacos</h2>
+            
+            <a href="tacosrecipe.html" class="recipe-link">View Recipe</a>
+        </div>
+        <div class="food-item">
+            <img src="images/luroufan.png" alt="Taiwanese Braised Pork Rice">
+            <h2> Braised Pork Rice(Taiwanese)</h2>
+           
+          
+            <a href="luroufanrecipe.html" class="recipe-link">View Recipe</a>
+        </div>
+        <div class="food-item">
+            <img src="images/neapolitan-pizza.png" alt="Neapolitan Pizza (Italy)">
+            <h2>Neapolitan Pizza (Italy)</h2>
+            
+            <a href="pizzarecipe.html" class="recipe-link">View Recipe</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Global Cuisine. All rights reserved.</p>
+    </footer>
+</body>
+</html>

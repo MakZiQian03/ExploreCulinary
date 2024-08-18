@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Culinary</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        #dynamic-header {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #dynamic-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        #dynamic-header .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        footer {
+            background-color: grey;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto; /* Stick footer to bottom */
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .card-img-top {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Explore Culinary</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutUs.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="subscribe.html">Subscribe Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vote.html">Vote Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="restaurant.html">Restaurant</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Global cuisene/1.html">Global Cuisines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Malaysian cuisene/FEW assignment/coverpage.html">Malaysian Cuisines</a>
+                </li>
+
+                
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="dynamic-header" class="jumbotron text-center">
+        <div class="content">
+            <h1 class="display-4">Welcome to Explore Culinary</h1>
+            <p class="lead">Discover the world's best culinary delights, recipes, and many more.</p>
+            <a href="AboutUs.html" class="btn btn-primary btn-lg">Learn More About Us</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <section class="container text-center my-5">
+            <h2>Explore Our Offerings</h2>
+            <p>Whether you're a home cook, a professional chef, or simply a food lover, we have something for everyone.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="Main page/picture/global cuisenes.jpg" class="card-img-top" alt="Global Recipes">
+                        <div class="card-body">
+                            <h5 class="card-title">Global Cuisines</h5>
+                            <p class="card-text">Discover delicious recipes from around the world.</p>
+                            <a href="Global cuisene/1.html" class="btn btn-outline-primary">View Cuisines</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="Main page/picture/malaysian cuisene.jpg" class="card-img-top" alt="Malaysian Recipes">
+                        <div class="card-body">
+                            <h5 class="card-title">Malaysian Cuisines</h5>
+                            <p class="card-text">Discover delicious recipes from Malaysia.</p>
+                            <a href="Malaysian cuisene/FEW assignment/coverpage.html" class="btn btn-outline-primary">View Cuisines</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="content">
+            <p class="lead">SUBSCRIBE US FOR MORE UPDATES</p>
+            <a href="subscribe.html" class="btn btn-primary btn-lg">Subscribe Us</a>
+            <p> </p>
+        </div>
+        <div class="footer-links">
+            <a href="AboutUs.html">About Us</a> | 
+            <a href="Contact.html">Contact Us</a> |
+            <a href="vote.html">Vote Us</a> |
+            <a href="subscribe.html">Subscribe Us</a>
+        </div>
+        <p>&copy; 2024 Explore Culinary. All rights reserved.</p>
+    </footer>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Background Image Script -->
+    <script>
+        window.onload = function() {
+            const header = document.getElementById('dynamic-header');
+            const images = [
+                'url("Main page/picture/cuisene1.jpg")',
+                'url("Main page/picture/cuisene2.jpg")',
+                'url("Main page/picture/cuisene3.jpg")',
+                'url("Main page/picture/cuisene4.jpg")',
+            ];
+            let currentIndex = 0;
+
+            function changeBackground() {
+                header.style.backgroundImage = images[currentIndex];
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+
+            // Change background every 3s
+            changeBackground();
+            setInterval(changeBackground, 3000);
+        };
+    </script>
+</body>
+</html>

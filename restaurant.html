@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Location - Explore Culinary</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Explore Culinary</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutUs.html">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="subscribe.html">Subscribe Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Global cuisene/1.html">Global Recipes</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="Malaysian cuisene/FEW assignment/coverpage.html">Malaysian Recipes</a>
+              </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <header id="dynamic-header" class="jumbotron text-center">
+        <div class="content">
+            <h1 class="display-4">Restaurant suggestions</h1>
+            <p class="lead">Take a look here for any high rating and popular restaurants available in Malaysia.</p>
+        </div>
+    </header>
+
+    <style>
+        #dynamic-header {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #dynamic-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        #dynamic-header .content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+
+<script>
+    const header = document.getElementById('dynamic-header');
+    const images = [
+        'url("Main page/picture/cuisene1.jpg")',
+        'url("Main page/picture/cuisene2.jpg")',
+        'url("Main page/picture/cuisene3.jpg")',
+        'url("Main page/picture/cuisene4.jpg")',
+    ];
+    let currentIndex = 0;
+
+    function changeBackground() {
+        header.style.backgroundImage = images[currentIndex];
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    // Change background every 3s
+    changeBackground();
+    setInterval(changeBackground, 3000);
+</script>
+
+<section id="restaurants" class="container">
+    <h2 class="section-title">High rating Restaurants</h2>
+    <p class="header-text">A quick guide for all the food enthusiasts to enjoy rich flavors of both tradisional and global cuisenes in Malaysia.</p>
+    <div class="row">
+
+        <!-- Restaurant 1 -->
+        <div class="col-md-4">
+            <div class="card restaurant-card">
+                <img src="Main page/picture/congkak.jpg" class="card-img-top" alt="Restaurant 1">
+                <div class="card-body">
+                    <h5 class="card-title">Congkak Nusantara Cuisine</h5>
+                    <p class="card-location">Bukit Bintang, Kuala Lumpur</p>
+                    <div class="card-details">
+                        <p class="card-text">★★★★☆</p>
+                        <p class="card-text">Recommend this Michelin rated restaurant specialising in authentic Malay cuisine. Located near central Bukit Bintang, this restaurant has a comfortable family dining style. All dishes were delicious, meats were succulent, and portion sizes were generous. Prices were quite reasonable. Staff were friendly and helpful with recommendations and explanations.  The kitchen service was efficient, and food came out quickly. Should try this place, there is a reason why it is Michelin rated.</p>                      
+                        <a href="https://www.google.com/maps/place/Congkak/@3.1479275,101.7101677,17z/data=!4m16!1m9!3m8!1s0x31cc37bac9957483:0x50f98b867b843a00!2sCongkak!8m2!3d3.1479275!4d101.7101677!9m1!1b1!16s%2Fg%2F11h4zpyj27!3m5!1s0x31cc37bac9957483:0x50f98b867b843a00!8m2!3d3.1479275!4d101.7101677!16s%2Fg%2F11h4zpyj27?entry=ttu" target="_blank">
+                            <button class="btn-map">Location</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Restaurant 2 -->
+        <div class="col-md-4">
+            <div class="card restaurant-card">
+                <img src="Main page/picture/bijan.jpg" class="card-img-top" alt="Restaurant 2">
+                <div class="card-body">
+                    <h5 class="card-title">Bijan Bar & Restaurant</h5>
+                    <p class="card-location">Bukit Ceylon, Kuala Lumpur</p>
+                    <div class="card-details">
+                        <p class="card-text">★★★★★</p>
+                        <p class="card-text">The dishes and ambience left a good lasting impression on me when I came here in April 2024. I could not stop raving about this place and I even said this is not a tourist trap to all my friends. Came back in July 2024 with very high hopes but the quality is sadly just not quite the same. Good but not exceptional.</p>
+                        <p>General recommendations : Ayam Kampung Limau Purut, Cucur Udang, Sotong Manis, Udang Curry (pineapple yellow one) & nasi minyak.</p>
+                        <a href="https://www.google.com/maps/place/Bijan+Bar+%26+Restaurant/@3.1484386,101.7033645,17z/data=!3m1!4b1!4m6!3m5!1s0x31cc49d5a4bb4585:0xdefcae21c2ee52ad!8m2!3d3.1484386!4d101.7059394!16s%2Fg%2F1tf55cvp?entry=ttu" target="_blank">
+                            <button class="btn-map">Location</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Restaurant 3 -->
+        <div class="col-md-4">
+            <div class="card restaurant-card">
+                <img src="Main page/picture/fuerdai.jpg" class="card-img-top" alt="Restaurant 3">
+                <div class="card-body">
+                    <h5 class="card-title">Fu Er Dai 富二代</h5>
+                    <p class="card-location">George Town, Peneng</p>
+                    <div class="card-details">
+                        <p class="card-text">★★★★☆</p>
+                        <p class="card-text">Wow, truly lives up to the hype here but do note they are a bit pricey.Went in randomly on Wednesday for a late brunch and managed to snag a table when the tables are starting to fill for the upcoming lunch crowd. Loved that the service was friendly, polite and quick to get us seated, brief us on the order flow as well as drinks recommendation. Needless to say, had a wonderful time, money well spent and will be back.</p>
+                        <a href="https://www.google.com/maps/place/Fu+Er+Dai/@5.4232062,100.3302271,17z/data=!3m1!4b1!4m6!3m5!1s0x304ac3997e69a6ad:0x769f950d416938d7!8m2!3d5.4232062!4d100.332802!16s%2Fg%2F11btrrr09r?entry=ttu" target="_blank">
+                            <button class="btn-map">Location</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Restaurant 4 -->
+        <div class="col-md-4">
+            <div class="card restaurant-card">
+                <img src="Main page/picture/andrew.JPG" class="card-img-top" alt="Restaurant 4">
+                <div class="card-body">
+                    <h5 class="card-title">Andrew's Kampung</h5>
+                    <p class="card-location">Batu Ferringhi, Peneng</p>
+                    <div class="card-details">
+                        <p class="card-text">★★★★★</p>
+                        <p class="card-text">Andrew's Kampung has earned a reputation for delivering exceptional value for money, with guests often lauding the generous portions of delicious, authentic meals. The staff's attentiveness and willingness to cater to guests' dietary preferences have not gone unnoticed, contributing to the restaurant's warm reception.</p>
+                        <p>While the atmosphere strikes a chord with its authentic charm, opinions are divided over the simple decor. Nonetheless, many diners find the combination of hearty food and friendly service to be the perfect recipe for a satisfying dining experience.</p>
+                        <a href="https://www.google.com/maps?sca_esv=fb6bcd58b3d54b23&rlz=1C1CHZN_enMY974MY974&output=search&q=andrews+kampung&source=lnms&fbs=AEQNm0DPvcmG_nCbmwtBO9j6YBzM68ZanC7g01Skprhw5JoufUv28nkH7BlZuPSVPZEeFf4zEsryEwMB77hXASo0GX6ktue4NmhwpwwiaMFtmA_2de5gQg9OmAOSesxIZD6S4gXYPCVj4OKmStbIQFzMmPzehIwnfhd1m8eu_TTiEQtZI-2_KIp5i92eMzcT7Kg1ndlwZaOmZES9TUdJujq5hGT0Ub9e5g&entry=mc&ved=1t:200715&ictx=111" target="_blank">
+                            <button class="btn-map">Location</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Restaurant 5 -->
+        <div class="col-md-4">
+            <div class="card restaurant-card">
+                <img src="Main page/picture/pak-putrajpg.jpg" class="card-img-top" alt="restaurant 5">
+                <div class="card-body">
+                    <h5 class="card-title">Pak Putra Tandoori & Naan Restaurant</h5>
+                    <p class="card-location">Taman Kota Laksamana, Melaka</p>
+                    <div class="card-details">
+                        <p class="card-text">★★★★☆</p>
+                        <p class="card-text">Had mixed feelings about coming here for dinner but we left very satisfied. The dining area is literally in a quiet car park and the food served outside of the building shopfront. We ordered the tandoori chicken, Dahl and a roti each. The tandoori was the juiciest and most tender tandoori I’ve ever eaten. The mint sauce accompaniement was also a hit and the Dahl was packed with flavour for our roti. Both the tandoori and the roti was constantly being cooked so you could tell it was fresh and the place was full the whole time we were there. I think our bill came to about $14 aud.</p>
+                        <a href="https://www.google.com/maps?sca_esv=fb6bcd58b3d54b23&rlz=1C1CHZN_enMY974MY974&biw=1536&bih=730&output=search&q=pak+putra+tandoori+%26+naan+restaurant&source=lnms&fbs=AEQNm0DPvcmG_nCbmwtBO9j6YBzM68ZanC7g01Skprhw5JoufbCK1nGzScVrgK3HSlrjNu6plNP03ZWuAbxABvYcOgcrjEKGqHs1ZzuWjLDGGdgu0MYOQ2MaG4TSFNrgvKnsX_Ntn30kSbFnRzJWYIhFAXzjTPKIDwu8DDvD1v3HY7aQrVaQEmOst10t4o-FfkjPyEGmhW3vdB3kTb-1BPTGahS6ITOb9w&entry=mc&ved=1t:200715&ictx=111" target="_blank">
+                            <button class="btn-map">Location</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Restaurant 6 -->
+        <div class="col-md-4">
+            <div class="card restaurant-card">
+                <img src="Main page/picture/bica n co.jpg" class="card-img-top" alt="Restaurant 6">
+                <div class="card-body">
+                    <h5 class="card-title">Bica & Co Courtyard Cafe</h5>
+                    <p class="card-location">Jalan Parameswara, Melaka</p>
+                    <div class="card-details">
+                        <p class="card-text">★★★★★</p>
+                        <p class="card-text">This place is good for having a special night with your love one.It’s calming ambience with the friendly and sweet waitresses. The foods are good and served with a nice presentation but one thing I need to review is the pizza the pizza dough is ready made so it kinda hmm overall everything is marvellous worth every penny except the pizza</p>
+                        <a href="https://www.google.com/maps?sca_esv=fb6bcd58b3d54b23&rlz=1C1CHZN_enMY974MY974&biw=1536&bih=730&output=search&q=bica+%26+co+courtyard+cafe&source=lnms&fbs=AEQNm0DPvcmG_nCbmwtBO9j6YBzM68ZanC7g01Skprhw5JoufbCK1nGzScVrgK3HSlrjNu6plNP03ZWuAbxABvYcOgcrjEKGqHs1ZzuWjLDGGdgu0MYOQ2MaG4TSFNrgvKnsX_Ntn30kSbFnRzJWYIhFAXzjTPKIDwu8DDvD1v3HY7aQrVaQEmOst10t4o-FfkjPyEGmhW3vdB3kTb-1BPTGahS6ITOb9w&entry=mc&ved=1t:200715&ictx=111" target="_blank">
+                            <button class="btn-map">Location</button>
+                        </a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <!-- Restaurant 7 -->
+        <div class="col-md-4">
+            <div class="card restaurant-card">
+                <img src="Main page/picture/yuk-sou-hin.jpg" class="card-img-top" alt="Restaurant 7">
+                <div class="card-body">
+                    <h5 class="card-title">Yuk Sou Hin 玉寿轩</h5>
+                    <p class="card-location">Jalan Sultan Idris Shah, Ipoh</p>
+                    <div class="card-details">
+                        <p class="card-text">★★★★★</p>
+                        <p class="card-text">Yuk Sou Hin, a typical Chinese Restaurant which is located at WEIL Hotel which it's a must for you to try! Master Chef Chung from Hong Kong makes every dish perfect which makes you think you are dining in a Hong Kong Restaurant. Our signature dish - Smoked Duck with Lychee Wood is just mouth-watering. Dim Sum, is also served in Yuk Sou Hin.</p>
+                        <a href="https://www.google.com.my/maps/place/Yuk+Sou+Hin/@4.5947018,101.0875041,17z/data=!3m1!4b1!4m6!3m5!1s0x31caedbf978c6575:0x272cab4f2ac04f7e!8m2!3d4.5946965!4d101.090079!16s%2Fg%2F11h94_dkqj?hl=en&entry=ttu" target="_blank">
+                            <button class="btn-map">Location</button>
+                        </a>                          
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Restaurant 8 -->
+        <div class="col-md-4">
+            <div class="card restaurant-card">
+                <img src="Main page/picture/aun-kheng-lim-salted.jpg" class="card-img-top" alt="Restaurant 8">
+                <div class="card-body">
+                    <h5 class="card-title">Aun Kheng Lim Salted Chicken</h5>
+                    <p class="card-location">Jalan Theater, Ipoh</p>
+                    <div class="card-details">
+                        <p class="card-text">★★★★☆</p>
+                        <p class="card-text">Salted Chicken but it is surprisingly not very salty. Just nice for taste. Whole chicken, still warm, already wrapped and packed in plastic bag carrier. Although many customers but it is very fast. Just give them the money and they hand over the plastic bag of chicken. I am glad I gave this a try since I am visiting Ipoh on holiday.</p>
+                        <a href="https://www.google.com/maps/place/Ayam+Garam+Aun+Kheng+Lim+(Main+Branch)/@4.5947702,101.0805965,16z/data=!4m6!3m5!1s0x31caec635b9fa8b9:0x71746847f8bb0733!8m2!3d4.5946463!4d101.0833846!16s%2Fg%2F1ttdkh2_?entry=ttu" target="_blank">
+                            <button class="btn-map">Location</button>
+                        </a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <!-- Restaurant 9 -->
+        <div class="col-md-4">
+            <div class="card restaurant-card">
+                <img src="Main page/picture/suntwo.jpg" class="card-img-top" alt="Restaurant 9">
+                <div class="card-body">
+                    <h5 class="card-title">Sun Two Restaurant</h5>
+                    <p class="card-location">Kota Bahru, Kelantan</p>
+                    <div class="card-details">
+                        <p class="card-text">★★★★☆</p>
+                        <p class="card-text">I think it is the best restaurant in Kota Bharu. The meals are sedap and nyaman. Harga berpatutan. Friendly waiter and bosses. It still opens on Saturday and Sunday until 10pm while the other restaurants already closed for the day. The only problem with our google map which doesnt point the exact location, so we had to walk and look for it.</p>
+                        <a href="https://www.google.com/maps/place/Sun+Two+(STR+Family+Restaurant),+Halal/@6.128743,102.234823,17z/data=!3m1!4b1!4m6!3m5!1s0x31b6afcf4ab8f53b:0x8749bb9934dcd7b3!8m2!3d6.128743!4d102.2373979!16s%2Fg%2F1pzx97ky_?entry=ttu" target="_blank">
+                            <button class="btn-map">Location</button>
+                        </a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/*Restaurant Card*/
+.section-title {
+
+    margin-top: 50px;
+}
+
+.header-text {
+
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.restaurant-card {
+    background-color: #daeff55b;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.restaurant-card:hover {
+    transform: scale(1.1);
+}
+
+.card-body {
+    padding: 15px;
+}
+
+
+.card-details {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-family: "DM Sans", system-ui;
+}
+
+.restaurant-card:hover .card-details {
+    display: block;
+    opacity: 1;
+}
+
+.card-details a {
+    text-decoration: none;
+}
+
+.btn-map {
+    display: block;
+    background-color: #0015ff5b;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-map:hover {
+    background-color: #0d0650;
+}
+
+.btn-menu {
+    display: block;
+    background-color: #0015ff5b;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-menu:hover {
+    background-color:  #0d0650;
+}
+</style>
+
+   <!-- Footer -->
+   <footer class="bg-light text-center py-4">
+    
+    <p>&copy; 2024 Explore Culinary. All rights reserved.</p>
+</footer>
+
+<!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

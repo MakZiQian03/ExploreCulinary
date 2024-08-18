@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Malaysian Cuisines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .food-gallery {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            padding: 20px;
+        }
+
+        .food-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 15px 0; 
+            width: 80%; 
+            max-width: 600px; 
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .food-item:hover {
+            transform: scale(1.05); /* Zoom effect */
+        }
+
+        .food-item img {
+            width: 100%;
+            height: 150px; 
+            object-fit: cover;
+        }
+
+        .food-item h2 {
+            margin: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: #000fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            color: #fff;
+            margin-top: 20px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Malaysia Cuisine</h1>
+    </header>
+
+    <section class="food-gallery">
+        <div class="food-item">
+            <a href="chinese.html">
+                <img src="FoodPicture/chinese food.jpg" alt="Chinese Food">
+                <h2>Chinese Food</h2>
+            </a>
+        </div>
+
+        <div class="food-item">
+            <a href="indian.html">
+                <img src="FoodPicture/indian food.jpg" alt="Indian Food">
+                <h2>Indian Food</h2>
+            </a>
+        </div>
+
+        <div class="food-item">
+            <a href="malay.html">
+                <img src="FoodPicture/malay food.jpg" alt="Malay Food">
+                <h2>Malay Food</h2>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Malaysia Cuisine. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

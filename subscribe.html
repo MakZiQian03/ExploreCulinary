@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe to Our Newsletter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://hcaptcha.com/1/api.js" async defer></script> <!-- hCaptcha script -->
+    <style>
+        body {
+            background-image: url('Main page/picture/cuisene1.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        .subscribe-section {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .subscribe-section h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .subscribe-section label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .subscribe-section .form-control {
+            margin-bottom: 15px;
+        }
+
+        .subscribe-section .btn {
+            background-color: #0000FF;
+            color: #fff;
+            border-radius: 10px;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .subscribe-section .btn:hover {
+            background-color: #0000CC;
+        }
+
+        .subscribe-section .form-text {
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Explore Culinary</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutUs.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vote.html">Vote Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="restaurant.html">Restaurant</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Global cuisene/1.html">Global Cuisines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Malaysian cuisene/FEW assignment/coverpage.html">Malaysian Cuisines</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="subscribe-section">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form id="subscribeForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+            </div>
+            <!-- hCaptcha widget -->
+            <div class="h-captcha" data-sitekey="3b582470-9b70-45a6-b3e2-5a9e3752d71a"></div>
+            <button type="button" id="submitSubscribe" class="btn">Subscribe</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Function to get a cookie value
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Event listener for the subscribe button
+        document.getElementById('submitSubscribe').addEventListener('click', function() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const hcaptchaResponse = hcaptcha.getResponse(); // Get hCaptcha response
+
+            if (!email.includes('@')) {
+                alert('Please enter a valid email address.');
+            } else if (hcaptchaResponse.length === 0) {
+                alert('Please complete the hCaptcha.');
+            } else {
+                // Save name in a cookie
+                setCookie('subscriberName', name, 7); // Save for 7 days
+
+                // Save email in sessionStorage
+                sessionStorage.setItem('subscriberEmail', email);
+
+                // Perform any further subscription logic here (e.g., sending data to the server)
+                alert('Thank you for subscribing, ' + name + '!');
+                document.getElementById('subscribeForm').reset(); // Clear the form
+                hcaptcha.reset(); // Reset hCaptcha
+            }
+        });
+
+        // Populate the form fields with saved data on page load
+        window.onload = function() {
+            const name = getCookie('subscriberName');
+            const email = sessionStorage.getItem('subscriberEmail');
+
+            if (name) {
+                document.getElementById('name').value = name;
+            }
+
+            if (email) {
+                document.getElementById('email').value = email;
+            }
+        };
+    </script>
+</body>
+</html>

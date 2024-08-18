@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Food</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .food-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .food-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            width: 450px; 
+            height: 400px; 
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative; /* For proper positioning of overlay */
+            cursor: pointer; /* Show pointer cursor on hover */
+            transition: transform 0.3s ease;
+        }
+
+        .food-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+
+        .food-item:hover {
+            transform: scale(1.05); /* Zoom effect */
+        }
+
+        .food-item img {
+            width: 100%;
+            height: 280px; 
+            object-fit: cover; 
+            transition: transform 0.3s ease;
+        }
+
+        .food-item h2 {
+            margin: 10px 0;
+        }
+
+        .recipe-link {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            width: 80%;
+            text-align: center;
+        }
+
+        .recipe-link:hover {
+            background-color: #000fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        .back-link {
+            display: block;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Indian Food</h1>
+    </header>
+
+    <section class="food-gallery">
+        <div class="food-item">
+        <a href="banana leaf rice recipe.html" >
+            <img src="FoodPicture/banana leaf rice.jpg" alt="Banana Leaf Rice">
+            <h2>Banana Leaf Rice</h2>
+            <span class="recipe-link">View Recipe</span>
+        </a>
+    </div>
+
+    <div class="food-item">
+        <a href="biryani recipe.html" >
+            <img src="FoodPicture/biryani.jpg" alt="Biryani">
+            <h2>Biryani</h2>
+            <span class="recipe-link">View Recipe</span>
+        </a>
+    </div>
+
+    <div class="food-item">
+        <a href="chapati recipe.html" >
+            <img src="FoodPicture/chapati.jpg" alt="Chapati">
+            <h2>Chapati</h2>
+            <span class="recipe-link">View Recipe</span>
+        </a>
+    </div>
+
+    <div class="food-item">
+        <a href="murukku recipe.html" >
+            <img src="FoodPicture/murukku.jpg" alt="Murukku">
+            <h2>Murukku</h2>
+            <span class="recipe-link">View Recipe</span>
+        </a>
+    </div>
+
+    <div class="food-item">
+        <a href="nasi kandar recipe.html" >
+            <img src="FoodPicture/nasi kandar.jpg" alt="Nasi Kandar">
+            <h2>Nasi Kandar</h2>
+            <span class="recipe-link">View Recipe</span>
+        </a>
+    </div>
+
+    <div class="food-item">
+        <a href="roti canai recipe.html" >
+            <img src="FoodPicture/roti canai.jpg" alt="Roti Canai">
+            <h2>Roti Canai</h2>
+            <span class="recipe-link">View Recipe</span>
+        </a>
+    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Indian Food. All rights reserved.</p>
+        <a href="coverpage.html" class="back-link">Back to Malaysia Food</a>
+    </footer>
+</body>
+</html>

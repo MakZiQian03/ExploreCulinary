@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Explore Culinary</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Explore Culinary</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="AboutUs.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="subscribe.html">Subscribe Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vote.html">Vote Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="restaurant.html">Restaurant</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Global cuisene/1.html">Global Cuisines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Malaysian cuisene/FEW assignment/coverpage.html">Malaysian Cuisines</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="dynamic-header" class="jumbotron text-center">
+        <div class="content">
+            <h1 class="display-4">Contact us</h1>
+            <p class="lead">For any inquiries, get in touch with us through our social media channels or drop us an email.</p>
+        </div>
+    </header>
+
+    <style>
+        #dynamic-header {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #dynamic-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        #dynamic-header .content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+
+<script>
+    const header = document.getElementById('dynamic-header');
+    const images = [
+        'url("Main page/picture/cuisene1.jpg")',
+        'url("Main page/picture/cuisene2.jpg")',
+        'url("Main page/picture/cuisene3.jpg")',
+        'url("Main page/picture/cuisene4.jpg")',
+    ];
+    let currentIndex = 0;
+
+    function changeBackground() {
+        header.style.backgroundImage = images[currentIndex];
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    // Change background every 3s
+    changeBackground();
+    setInterval(changeBackground, 3000);
+</script>
+
+    <!-- Contact Info Section -->
+    <section class="container my-5">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <a href="https://www.instagram.com/accounts/login" target="_blank" class="contact-link">
+                    <i class="fab fa-instagram fa-3x"></i>
+                    <h5 class="mt-2">Instagram</h5>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="https://www.facebook.com/login" target="_blank" class="contact-link">
+                    <i class="fab fa-facebook fa-3x"></i>
+                    <h5 class="mt-2">Facebook</h5>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="https://WhatsApp.com" target="_blank" class="contact-link">
+                    <i class="fab fa-whatsapp fa-3x"></i>
+                    <h5 class="mt-2">WhatsApp</h5>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="https://explorecuisene@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope fa-3x"></i>
+                    <h5 class="mt-2">Email</h5>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2024 Explore Culinary. All rights reserved.</p>
+    </footer>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
